@@ -1,0 +1,33 @@
+<div class="card backLoginForm">
+  <div class="card-body">
+  <div class="panel panel-info">
+    <h5 class="card-title">Login Form</h5>
+	</div>
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        class="form-control"
+        id="username"
+        placeholder="Username"
+        [(ngModel)]="parametros.username"
+      />
+    </div>
+    <div class="form-group">
+      <label for="email">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        placeholder="Password"
+        [(ngModel)]="parametros.password"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary buttonLoginForm" (click)="tryLogin()">
+      Login
+    </button>
+	<span *ngIf="forInvalido">                    Usuário ou senha inválida!</span>
+  </div>
+</div>
+
+
